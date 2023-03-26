@@ -1,12 +1,14 @@
 import eel
-import rfcontroller
+# import rfcontroller
 
-controller = rfcontroller.RFController() 
+# controller = rfcontroller.RFController() 
 
 @eel.expose
 def togglePlug(command):
-    controller.sendcode(command)
+#     controller.sendcode(command)
+    print(command)
 
 if __name__ == "__main__":
     eel.init('web')
-    eel.start('index.html', cmdline_args=['--start-fullscreen'])
+    eel.start('index.html')
+    # eel.start('index.html', cmdline_args=['--start-fullscreen'])
